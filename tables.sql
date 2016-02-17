@@ -67,7 +67,22 @@ CREATE TABLE Customer (
 	customerId NUMBER(10) PRIMARY KEY,
 	firstName VARCHAR(16) NOT NULL,
 	lastName VARCHAR(16) NOT NULL,
-	age NUMBER(3) NOT NULL
+	age NUMBER(3) NOT NULL,
+	address VARCHAR(100) NOT NULL,
+	phone VARCHAR(16) NOT NULL,
+	CONSTANT Customer_ageVal check(age >= 0)
+);
+
+DROP TABLE TravelingWith CASCADE CONSTRAINTS;
+CREATE TABLE TravelingWith (
+	travelingWithId NUMBER(10) NOT NULL,
+	customerId NUMBER(10) NOT NULL,
+	firstName VARCHAR(16) NOT NULL,
+	lastName VARCHAR(16) NOT NULL,
+	age NUMBER(3) NOT NULL,
+	PRIMARY KEY (travelingWithId, customerId),
+	CONSTRAINT TravelingWith_fk_customerId FOREIGN KEY (customerId) REFERENCES Customer(customerId),
+	CONSTANT TravelingWith_ageVal check(age >= 0)
 );
 
 DROP TABLE BookedTour CASCADE CONSTRAINTS;
