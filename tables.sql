@@ -70,7 +70,7 @@ CREATE TABLE Customer (
 	age NUMBER(3) NOT NULL,
 	address VARCHAR(100) NOT NULL,
 	phone VARCHAR(16) NOT NULL,
-	CONSTANT Customer_ageVal check(age >= 0)
+	CONSTRAINT Customer_ageVal check(age >= 0)
 );
 
 DROP TABLE TravelingWith CASCADE CONSTRAINTS;
@@ -82,7 +82,7 @@ CREATE TABLE TravelingWith (
 	age NUMBER(3) NOT NULL,
 	PRIMARY KEY (travelingWithId, customerId),
 	CONSTRAINT TravelingWith_fk_customerId FOREIGN KEY (customerId) REFERENCES Customer(customerId),
-	CONSTANT TravelingWith_ageVal check(age >= 0)
+	CONSTRAINT TravelingWith_ageVal check(age >= 0)
 );
 
 DROP TABLE BookedTour CASCADE CONSTRAINTS;
@@ -90,7 +90,7 @@ CREATE TABLE BookedTour (
 	bookedTourId NUMBER(10) PRIMARY KEY,
 	purchaseDate DATE NOT NULL,
 	travelDate DATE NOT NULL,
-	totalPrice NUMBER(6, 2) NOT NULL,
+	totalPrice NUMBER(6, 2),
 	tourId NUMBER(10) NOT NULL,
 	driverLicense NUMBER(10) NOT NULL,
 	licensePlate CHAR(6) NOT NULL,
