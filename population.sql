@@ -70,6 +70,7 @@ INSERT INTO Location (locationId, locationName, type, address, longitude, laditu
 -- END Locations
  
 -- Customers with Traveling Companions!
+-- Party 1
 INSERT INTO Customer (customerId, firstName, lastName, age, address, phone)
  VALUES (1, 'Joe', 'Shmoe', 32, '100 Joe Shmoe Ln.', 18025553212);
 
@@ -79,5 +80,54 @@ INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age)
 INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
  VALUES (2, 1, 'Stacy', 'Shmoe', 11);
 
+-- Party 2
+INSERT INTO Customer (customerId, firstName, lastName, age, address, phone)
+ VALUES (2, 'Joe', 'Shmee', 32, '100 Joe Shmee Ln.', 18025553122);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (1, 2, 'Stevey', 'Shmee', 15);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (2, 2, 'Stacy', 'Shmee', 3);
+
+-- Party 3
+INSERT INTO Customer (customerId, firstName, lastName, age, address, phone)
+ VALUES (3, 'Joe', 'Shmeegle', 32, '100 Joe Shmeegle Ln.', 18025553322);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (1, 3, 'Stevey', 'Shmeegle', 12);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (2, 3, 'Stacy', 'Shmeegle', 23);
+
+-- Party 4
+INSERT INTO Customer (customerId, firstName, lastName, age, address, phone)
+ VALUES (4, 'Joe', 'Mallard', 32, '100 Joe Mallard Pond Ln.', 18025553232);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (1, 4, 'Stevey', 'Mallard', 12);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (2, 4, 'Stacy', 'Mallard', 23);
+
+-- Party 5
+INSERT INTO Customer (customerId, firstName, lastName, age, address, phone)
+ VALUES (5, 'Joe', 'Doe', 32, '100 Joe Doe Ln.', 18025553232);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (1, 5, 'Stevey', 'Doe', 12);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (2, 5, 'Stacy', 'Doe', 29);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (3, 5, 'Paula', 'Doe', 21);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (4, 5, 'Kerry', 'Pane', 21);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (5, 5, 'Rich', 'Haverhill', 93);
 -- END Customers with Traveling Companions
+
 
