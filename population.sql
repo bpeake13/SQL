@@ -107,7 +107,7 @@ INSERT INTO Traveling(tourId, locationId)
  VALUES (3, 4);
 
 INSERT INTO Traveling(tourId, locationId)
- VALUES (3, 6);
+ VALUES (3, 1);
 -- END Traveling
 
 -- Customers with Traveling Companions!
