@@ -152,6 +152,7 @@ INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age)
  VALUES (2, 4, 'Stacy', 'Mallard', 23);
 
 -- Party 5
+-- One party of 5
 INSERT INTO Customer (customerId, firstName, lastName, age, address, phone)
  VALUES (5, 'Joe', 'Doe', 32, '100 Joe Doe Ln.', 18025553232);
 
@@ -172,8 +173,26 @@ INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age)
 -- END Customers with Traveling Companions
 
 -- Booked Tours
+-- One customer has booked 2 Tours
 INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicence, licencePlate, customerId)
- VALUES(1, to_date('20100726','YYYYMMDD'), 1, 12345678, 1, 1);
+ VALUES(1, to_date('20000726','YYYYMMDD'), to_date('20100726','YYYYMMDD'), 1, 12345678, 1, 1);
+
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicence, licencePlate, customerId)
+ VALUES(2, to_date('20030726','YYYYMMDD'), to_date('20100726','YYYYMMDD'), 2, 22345678, 12, 1);
+-- The rest have booked 1
+
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicence, licencePlate, customerId)
+ VALUES(3, to_date('20000726','YYYYMMDD'), to_date('20100726','YYYYMMDD'), 4, 12345678, 1, 2);
+
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicence, licencePlate, customerId)
+ VALUES(4, to_date('20030726','YYYYMMDD'), to_date('20100726','YYYYMMDD') 3, 1, 123, 3);
+
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicence, licencePlate, customerId)
+ VALUES(5, to_date('20030726','YYYYMMDD'), to_date('20100726','YYYYMMDD') 3, 1, 1235, 4);
+
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicence, licencePlate, customerId)
+ VALUES(6, to_date('20030726','YYYYMMDD'), to_date('20100726','YYYYMMDD') 3, 1, 1235, 5);
+
 -- END Booked Tours
 
 
