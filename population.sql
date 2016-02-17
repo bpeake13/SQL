@@ -16,19 +16,19 @@ INSERT INTO Guide (driverLicense, firstName, lastName, phone, vehicleType, title
 -- END Guides
 
 -- Vehicles
-INSERT INTO Vehicle(licencePlate, vehicleType, make, model, year, maxPassengers)
+INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
  VALUES (1, 'car', 'Vlogo', 'XL-PL340', 2001, 3);
 
-INSERT INTO Vehicle(licencePlate, vehicleType, make, model, year, maxPassengers)
+INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
  VALUES (12, 'bus', 'Vlogdo', 'XL3-PL344560', 2007, 30);
 
-INSERT INTO Vehicle(licencePlate, vehicleType, make, model, year, maxPassengers)
+INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
  VALUES (123, 'bus', 'Karmi', 'XL3-PL34780', 2002, 60);
 
-INSERT INTO Vehicle(licencePlate, vehicleType, make, model, year, maxPassengers)
+INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
  VALUES (1234, 'bus', 'Karami', 'XL3-PL34650', 2009, 23);
 
-INSERT INTO Vehicle(licencePlate, vehicleType, make, model, year, maxPassengers)
+INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
  VALUES (1235, 'amphibious', 'DuckBoat', 'XL3-P32L340', 2008, 49);
 -- END Vehicles
 
@@ -174,23 +174,23 @@ INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age)
 
 -- Booked Tours
 -- One customer has booked 2 Tours
-INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licencePlate, customerId)
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
  VALUES(1, to_date('20000726','YYYYMMDD'), to_date('20100726','YYYYMMDD'), 1, 12345678, 1, 1);
 
-INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licencePlate, customerId)
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
  VALUES(2, to_date('20030726','YYYYMMDD'), to_date('20100726','YYYYMMDD'), 2, 22345678, 12, 1);
 -- The rest have booked 1
 
-INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licencePlate, customerId)
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
  VALUES(3, to_date('20000726','YYYYMMDD'), to_date('20100726','YYYYMMDD'), 4, 12345678, 1, 2);
 
-INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licencePlate, customerId)
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
  VALUES(4, to_date('20030726','YYYYMMDD'), to_date('20100726','YYYYMMDD') 3, 1, 123, 3);
 
-INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licencePlate, customerId)
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
  VALUES(5, to_date('20030726','YYYYMMDD'), to_date('20100726','YYYYMMDD') 3, 1, 1235, 4);
 
-INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licencePlate, customerId)
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
  VALUES(6, to_date('20030726','YYYYMMDD'), to_date('20100726','YYYYMMDD') 3, 1, 1235, 5);
 
 -- END Booked Tours
