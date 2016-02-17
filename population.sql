@@ -130,4 +130,9 @@ INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age)
  VALUES (5, 5, 'Rich', 'Haverhill', 93);
 -- END Customers with Traveling Companions
 
+-- Booked Tours
+INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicence, licencePlate, customerId)
+ VALUES(1, to_date('20100726','YYYYMMDD'), 1, 12345678, 1, 1);
+-- END Booked Tours
+
 
