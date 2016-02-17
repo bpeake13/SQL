@@ -1,3 +1,4 @@
+-- Guides!
 INSERT INTO Guide (driverLicence, firstName, lastName, phone, vehicleType, title, salary, hireDate)
  VALUES (12345678, 'Steve', 'Jobs', '18005553020', 'amphibious', 'senior guide', 3000.50, to_date('20060725','YYYYMMDD'));
 
@@ -12,8 +13,24 @@ INSERT INTO Guide (driverLicence, firstName, lastName, phone, vehicleType, title
 
 INSERT INTO Guide (driverLicence, firstName, lastName, phone, vehicleType, title, salary, hireDate)
  VALUES (1, 'Gary', 'Pol', '18005553233', 'amphibious', 'senior guide', 3021.14, to_date('20030726','YYYYMMDD'));
-
 -- END Guides
+
+-- Vehicles
+INSERT INTO Vehicle(licencePlate, vehicleType, make, model, year, maxPassengers)
+ VALUES (1, 'car', 'Vlogo', 'XL-PL340', 2001, 3);
+
+INSERT INTO Vehicle(licencePlate, vehicleType, make, model, year, maxPassengers)
+ VALUES (12, 'bus', 'Vlogdo', 'XL3-PL344560', 2007, 30);
+
+INSERT INTO Vehicle(licencePlate, vehicleType, make, model, year, maxPassengers)
+ VALUES (123, 'bus', 'Karmi', 'XL3-PL34780', 2002, 60);
+
+INSERT INTO Vehicle(licencePlate, vehicleType, make, model, year, maxPassengers)
+ VALUES (1234, 'bus', 'Karami', 'XL3-PL34650', 2009, 23);
+
+INSERT INTO Vehicle(licencePlate, vehicleType, make, model, year, maxPassengers)
+ VALUES (1235, 'amphibious', 'DuckBoat', 'XL3-P32L340', 2008, 49);
+-- END Vehicles
 
 -- Tours!
 INSERT INTO Tour (tourId, tourName, description, city, state, duration, vehicleType, adultCost, childCost)
@@ -33,7 +50,7 @@ INSERT INTO Tour (tourId, tourName, description, city, state, duration, vehicleT
 
 INSERT INTO Tour (tourId, tourName, description, city, state, duration, vehicleType, adultCost, childCost)
   VALUES (6, 'Tour F', 'Why are you going on this tour?', 'Forks', 'Washington', 99, 'bus', 432, 3.11);
--- End Tours
+-- END Tours
 
 -- Locations!
 INSERT INTO Location (locationId, locationName, type, address, longitude, laditude)
@@ -48,8 +65,19 @@ INSERT INTO Location (locationId, locationName, type, address, longitude, laditu
 INSERT INTO Location (locationId, locationName, type, address, longitude, laditude)
  VALUES (4, 'Apple Seas', 'historic', '103 Infinite Loop Dr.', 4949.32124, 442.243242);
  
- INSERT INTO Location (locationId, locationName, type, address, longitude, laditude)
+INSERT INTO Location (locationId, locationName, type, address, longitude, laditude)
  VALUES (5, 'Apple Sneeze', 'resturant', '104 Infinite Loop Dr.', 1232.32124, 9435.243242);
--- End Locations
+-- END Locations
  
- 
+-- Customers with Traveling Companions!
+INSERT INTO Customer (customerId, firstName, lastName, age, address, phone)
+ VALUES (1, 'Joe', 'Shmoe', 32, '100 Joe Shmoe Ln.', 18025553212);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (1, 1, 'Stevey', 'Shmoe', 12);
+
+INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age) 
+ VALUES (2, 1, 'Stacy', 'Shmoe', 11);
+
+-- END Customers with Traveling Companions
+
