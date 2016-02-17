@@ -80,7 +80,7 @@ CREATE TABLE BookedTour (
 	driverLicense NUMBER(10) NOT NULL,
 	licensePlate CHAR(6) NOT NULL,
 	customerId NUMBER(10) NOT NULL,
-	CONSTRAINT BOokedTour_fk_tourId FOREIGN KEY (tourId) REFERENCES Tour(tourId),
+	CONSTRAINT BookedTour_fk_tourId FOREIGN KEY (tourId) REFERENCES Tour(tourId),
 	CONSTRAINT BookedTour_fk_licensePlate FOREIGN KEY (licensePlate) REFERENCES Vehicle(licensePlate),
 	CONSTRAINT BOokedTour_fk_customerId FOREIGN KEY (customerId) REFERENCES Customer(customerId)
 );
