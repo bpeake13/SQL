@@ -1,6 +1,18 @@
 INSERT INTO Guide (driverLicence, firstName, lastName, phone, vehicleType, title, salary, hireDate)
  VALUES (12345678, 'Steve', 'Jobs', '18005553020', 'amphibious', 'senior guide', 3000.50, to_date('20060725','YYYYMMDD'));
- 
+
+INSERT INTO Guide (driverLicence, firstName, lastName, phone, vehicleType, title, salary, hireDate)
+ VALUES (22345678, 'Tim', 'Cook', '18005553021', 'bus', 'guide', 2000.53, to_date('20120725','YYYYMMDD'));
+
+INSERT INTO Guide (driverLicence, firstName, lastName, phone, vehicleType, title, salary, hireDate)
+ VALUES (32413323, 'Paul', 'Cook', '18005553023', 'car', 'junior guide', 100.12, to_date('20150725','YYYYMMDD'));
+
+INSERT INTO Guide (driverLicence, firstName, lastName, phone, vehicleType, title, salary, hireDate)
+ VALUES (32424, 'Ken', 'Stanford', '18005553033', 'bus', 'guide', 100.14, to_date('20150726','YYYYMMDD'));
+
+INSERT INTO Guide (driverLicence, firstName, lastName, phone, vehicleType, title, salary, hireDate)
+ VALUES (1, 'Gary', 'Pol', '18005553233', 'amphibious', 'senior guide', 3021.14, to_date('20030726','YYYYMMDD'));
+
 -- END Guides
 
 -- Tours!
