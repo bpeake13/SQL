@@ -54,19 +54,19 @@ INSERT INTO Tour (tourId, tourName, description, city, state, duration, vehicleT
 
 -- Locations!
 INSERT INTO Location (locationId, locationName, type, address, longitude, laditude)
- VALUES (1, 'AppleBees', 'resturant', '100 Infinite Loop Dr.', 3949.3234, 3242.242);
+ VALUES (1, 'AppleBees', 'resturant', '100 Infinite Loop Dr.', 49.3234, 43.242234);
 
 INSERT INTO Location (locationId, locationName, type, address, longitude, laditude)
- VALUES (2, 'Apple Trees', 'museum', '101 Infinite Loop Dr.', 3949.32234, 3242.2433);
+ VALUES (2, 'Apple Trees', 'museum', '101 Infinite Loop Dr.', 949.32234, 23.232433);
 
 INSERT INTO Location (locationId, locationName, type, address, longitude, laditude)
- VALUES (3, 'Apple Keys', 'historic', '102 Infinite Loop Dr.', 3949.32124, 442.2432);
+ VALUES (3, 'Apple Keys', 'historic', '102 Infinite Loop Dr.', 84.32231, 12.2432);
 
 INSERT INTO Location (locationId, locationName, type, address, longitude, laditude)
- VALUES (4, 'Apple Seas', 'historic', '103 Infinite Loop Dr.', 4949.32124, 442.2432);
+ VALUES (4, 'Apple Seas', 'historic', '103 Infinite Loop Dr.', 249.321, 23.24323);
  
 INSERT INTO Location (locationId, locationName, type, address, longitude, laditude)
- VALUES (5, 'Apple Sneeze', 'resturant', '104 Infinite Loop Dr.', 1232.32124, 9435.2433);
+ VALUES (5, 'Apple Sneeze', 'resturant', '104 Infinite Loop Dr.', 132.32124, 34.2433);
 -- END Locations
 
 -- Traveling!
