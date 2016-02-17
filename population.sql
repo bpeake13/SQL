@@ -68,7 +68,48 @@ INSERT INTO Location (locationId, locationName, type, address, longitude, laditu
 INSERT INTO Location (locationId, locationName, type, address, longitude, laditude)
  VALUES (5, 'Apple Sneeze', 'resturant', '104 Infinite Loop Dr.', 1232.32124, 9435.243242);
 -- END Locations
+
+-- Traveling!
+-- Tours 1 and 4 include 2 locations
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (1, 1);
  
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (1, 2);
+
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (4, 3);
+ 
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (4, 2);
+
+-- Tour 2 includes 5 locations
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (2, 1);
+
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (2, 2);
+
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (2, 3);
+
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (2, 4);
+
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (2, 6);
+
+-- Tour 3 includes 3 locations.
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (3, 3);
+
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (3, 4);
+
+INSERT INTO Traveling(tourId, locationId)
+ VALUES (3, 6);
+-- END Traveling
+
 -- Customers with Traveling Companions!
 -- Party 1
 INSERT INTO Customer (customerId, firstName, lastName, age, address, phone)
