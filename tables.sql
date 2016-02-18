@@ -35,8 +35,8 @@ CREATE TABLE Tour (
 	state VARCHAR(64) NOT NULL,
 	duration NUMBER(5) NOT NULL,
 	vehicleType CHAR(10) NOT NULL,
-	adultCost NUMBER(5, 2) NOT NULL,
-	childCost NUMBER(5, 2) NOT NULL,
+	adultCost NUMBER(6, 2) NOT NULL,
+	childCost NUMBER(6, 2) NOT NULL,
 	CONSTRAINT Tour_vehicleTypeVal check(vehicleType in ('car', 'amphibious', 'bus')),
 	CONSTRAINT Tour_adultCostVal check(adultCost >= 0),
 	CONSTRAINT Tour_childCostVal check(childCost >= 0)
@@ -99,3 +99,40 @@ CREATE TABLE BookedTour (
 	CONSTRAINT BookedTour_fk_licensePlate FOREIGN KEY (licensePlate) REFERENCES Vehicle(licensePlate),
 	CONSTRAINT BOokedTour_fk_customerId FOREIGN KEY (customerId) REFERENCES Customer(customerId)
 );
+
+DROP TRIGGER "onTourBooked";
+CREATE TRIGGER onTourBooked BEFORE INSERT ON BookedTour
+FOR EACH ROW
+DECLARE
+	childCostTemp NUMBER(6, 2);
+	adultCostTemp NUMBER(6, 2);
+	customerAmount NUMBER(6, 2);
+	partySum NUMBER(6, 2);
+BEGIN
+	SELECT Tour.adultCost INTO adultCostTemp FROM Tour WHERE Tour.tourId = :NEW.tourId;
+	SELECT Tour.childCost INTO childCostTemp FROM Tour WHERE Tour.tourId = :NEW.tourId;
+	SELECT (CASE WHEN Customer.age >= 18 THEN adultCostTemp ELSE childCostTemp END) INTO customerAmount
+	FROM Customer
+	WHERE Customer.customerId = :NEW.customerId;
+	SELECT SUM(CASE WHEN TravelingWith.age >= 18 THEN adultCostTemp ELSE childCostTemp END) INTO partySum
+	FROM TravelingWith
+	WHERE TravelingWith.customerId = :NEW.customerId;
+	:NEW.totalPrice := customerAmount + partySum;
+END;
+/
+
+DROP TRIGGER "onTourUpdated";
+CREATE TRIGGER onTourUpdated AFTER UPDATE ON Tour
+FOR EACH ROW
+BEGIN
+	UPDATE BookedTour SET BookedTour.totalPrice = 
+	(SELECT (CASE WHEN Customer.age >= 18 THEN :NEW.adultCost ELSE :NEW.childCost END)
+	FROM Customer
+	WHERE Customer.customerId = BookedTour.customerId)
+	+
+	(SELECT SUM(CASE WHEN TravelingWith.age >= 18 THEN :NEW.adultCost ELSE :NEW.childCost END)
+	FROM TravelingWith
+	WHERE TravelingWith.customerId = BookedTour.customerId)
+	WHERE BookedTour.tourId = :NEW.tourId;
+END;
+/
