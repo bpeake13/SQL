@@ -1,2 +1,3 @@
-UPDATE Tour (tourId, adultCost)
-  VALUES (6, 324);
+UPDATE Tour 
+SET Tour.adultCost = 324
+WHERE Tour.tourId = 1;
