@@ -182,13 +182,13 @@ INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLi
 -- The rest have booked 1
 
 INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
- VALUES(3, to_date('20000726','YYYYMMDD'), to_date('20100726','YYYYMMDD'), 4, 12345678, 1, 2);
+ VALUES(3, to_date('20150726','YYYYMMDD'), to_date('20150728','YYYYMMDD'), 4, 12345678, 1, 2);
 
 INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
  VALUES(4, to_date('20030726','YYYYMMDD'), to_date('20100726','YYYYMMDD'), 3, 1, 123, 3);
 
 INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
- VALUES(5, to_date('20030726','YYYYMMDD'), to_date('20100726','YYYYMMDD'), 3, 1, 1235, 4);
+ VALUES(5, to_date('20150726','YYYYMMDD'), to_date('20160729','YYYYMMDD'), 3, 1, 1235, 4);
 
 INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
  VALUES(6, to_date('20030726','YYYYMMDD'), to_date('20100726','YYYYMMDD'), 3, 1, 1235, 5);
