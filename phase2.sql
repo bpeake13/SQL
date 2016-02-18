@@ -400,7 +400,12 @@ GROUP BY BookedTour.tourId, Tour.tourName, Tour.city, Tour.state, Tour.vehicleTy
 SELECT Customer.*
 FROM Customer, BookedTour
 WHERE Customer.customerId = BookedTour.customerId
-AND (YEAR(BookedTour.travelDate) = '2015' OR YEAR(BookedTour.travelDate) = '2016');
+AND YEAR(BookedTour.travelDate) = '2015'
+UNION
+SELECT Customer.*
+FROM Customer, BookedTour
+WHERE Customer.customerId = BookedTour.customerId
+AND YEAR(BookedTour.travelDate) = '2016';
 
 -- Q8 Report which is the most popular tour, i.e. the tour that has been booked the most often (appears most often in BookedTours). Do not factor in traveling companions of the primary customer.
 SELECT *
