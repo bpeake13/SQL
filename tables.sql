@@ -100,8 +100,7 @@ CREATE TABLE BookedTour (
 	CONSTRAINT BOokedTour_fk_customerId FOREIGN KEY (customerId) REFERENCES Customer(customerId)
 );
 
-DROP TRIGGER "onTourBooked";
-CREATE TRIGGER onTourBooked BEFORE INSERT ON BookedTour
+CREATE OR REPLACE TRIGGER onTourBooked BEFORE INSERT ON BookedTour
 FOR EACH ROW
 DECLARE
 	childCostTemp NUMBER(6, 2);
@@ -121,8 +120,7 @@ BEGIN
 END;
 /
 
-DROP TRIGGER "onTourUpdated";
-CREATE TRIGGER onTourUpdated AFTER UPDATE ON Tour
+CREATE OR REPLACE TRIGGER onTourUpdated AFTER UPDATE ON Tour
 FOR EACH ROW
 BEGIN
 	UPDATE BookedTour SET BookedTour.totalPrice = 

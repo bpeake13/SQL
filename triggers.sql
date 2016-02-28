@@ -43,16 +43,13 @@ CREATE OR REPLACE TRIGGER doNotDoubleBookGuide
 BEFORE INSERT OR UPDATE ON BookedTour
 FOR EACH ROW
 DECLARE
-	numberOfToursGivenOnSameDay NUMBER(10);
+	numberOfToursGivenOnSameDay NUMBER;
 	invalid_tour_guide EXCEPTION;
 BEGIN
-	numberOfToursGivenOnSameDay := 0;
-	
-	SELECT COUNT(BookedTour.travelDate) INTO numberOfToursGivenOnSameDay
+	SELECT COUNT(*) INTO numberOfToursGivenOnSameDay
 	FROM BookedTour
 	WHERE BookedTour.driverLicense = :NEW.driverLicense
-	AND BookedTour.travelDate = :NEW.travelDate
-	GROUP BY BookedTour.travelDate;
+	AND BookedTour.travelDate = :NEW.travelDate;
 	
 	IF (numberOfToursGivenOnSameDay > 0) THEN
 		RAISE invalid_tour_guide;

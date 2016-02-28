@@ -2,7 +2,7 @@
 
 -- Guides!
 INSERT INTO Guide (driverLicense, firstName, lastName, phone, vehicleType, title, salary, hireDate)
- VALUES (12345678, 'Steve', 'Jobs', '18005553020', 'amphibious', 'senior guide', 3000.50, to_date('20060725','YYYYMMDD'));
+ VALUES (12345678, 'Steve', 'Jobs', '18005553020', 'amphibious', 'senior guide', 50000.50, to_date('20060725','YYYYMMDD'));
 
 INSERT INTO Guide (driverLicense, firstName, lastName, phone, vehicleType, title, salary, hireDate)
  VALUES (22345678, 'Tim', 'Cook', '18005553021', 'bus', 'guide', 2000.53, to_date('20120725','YYYYMMDD'));
@@ -14,10 +14,10 @@ INSERT INTO Guide (driverLicense, firstName, lastName, phone, vehicleType, title
  VALUES (32424, 'Ken', 'Stanford', '18005553033', 'bus', 'guide', 100.14, to_date('20150726','YYYYMMDD'));
 
 INSERT INTO Guide (driverLicense, firstName, lastName, phone, vehicleType, title, salary, hireDate)
- VALUES (1, 'Gary', 'Pol', '18005553233', 'amphibious', 'senior guide', 3021.14, to_date('20030726','YYYYMMDD'));
+ VALUES (1, 'Gary', 'Pol', '18005553233', 'amphibious', 'senior guide', 60021.14, to_date('20030726','YYYYMMDD'));
 
 INSERT INTO Guide (driverLicense, firstName, lastName, phone, vehicleType, title, salary, hireDate)
- VALUES (2, 'Steve', 'Jobs', '18005553020', 'amphibious', 'senior guide', 3000.50, to_date('20060725','YYYYMMDD'));
+ VALUES (2, 'Steve', 'Jobs', '18005553020', 'amphibious', 'senior guide', 50000.50, to_date('20060725','YYYYMMDD'));
 
 INSERT INTO Guide (driverLicense, firstName, lastName, phone, vehicleType, title, salary, hireDate)
  VALUES (3, 'Tim', 'Cook', '18005553021', 'bus', 'guide', 2000.53, to_date('20120725','YYYYMMDD'));
@@ -29,7 +29,7 @@ INSERT INTO Guide (driverLicense, firstName, lastName, phone, vehicleType, title
  VALUES (5, 'Ken', 'Stanford', '18005553033', 'bus', 'guide', 100.14, to_date('20150726','YYYYMMDD'));
 
 INSERT INTO Guide (driverLicense, firstName, lastName, phone, vehicleType, title, salary, hireDate)
- VALUES (6, 'Gary', 'Pol', '18005553233', 'amphibious', 'senior guide', 3021.14, to_date('20030726','YYYYMMDD'));
+ VALUES (6, 'Gary', 'Pol', '18005553233', 'amphibious', 'senior guide', 50021.14, to_date('20030726','YYYYMMDD'));
 -- END Guides
 
 -- Vehicles
@@ -37,13 +37,13 @@ INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
  VALUES (1, 'car', 'Vlogo', 'XL-PL340', 2001, 3);
 
 INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
- VALUES (12, 'bus', 'Vlogdo', 'XL3-PL344560', 2007, 30);
+ VALUES (12, 'bus', 'Vlogdo', 'XL3-PL344560', 2012, 30);
 
 INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
- VALUES (123, 'bus', 'Karmi', 'XL3-PL34780', 2002, 60);
+ VALUES (123, 'bus', 'Karmi', 'XL3-PL34780', 2012, 60);
 
 INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
- VALUES (1234, 'bus', 'Karami', 'XL3-PL34650', 2009, 23);
+ VALUES (1234, 'bus', 'Karami', 'XL3-PL34650', 2015, 23);
 
 INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
  VALUES (1235, 'amphibious', 'DuckBoat', 'XL3-P32L340', 2008, 49);
@@ -52,13 +52,13 @@ INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
  VALUES (2, 'car', 'Vlogo', 'XL-PL340', 2001, 3);
 
 INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
- VALUES (3, 'bus', 'Vlogdo', 'XL3-PL344560', 2007, 30);
+ VALUES (3, 'bus', 'Vlogdo', 'XL3-PL344560', 2016, 30);
 
 INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
- VALUES (4, 'bus', 'Karmi', 'XL3-PL34780', 2002, 60);
+ VALUES (4, 'bus', 'Karmi', 'XL3-PL34780', 2012, 60);
 
 INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
- VALUES (5, 'bus', 'Karami', 'XL3-PL34650', 2009, 23);
+ VALUES (5, 'bus', 'Karami', 'XL3-PL34650', 2010, 23);
 
 INSERT INTO Vehicle(licensePlate, vehicleType, make, model, year, maxPassengers)
  VALUES (6, 'amphibious', 'DuckBoat', 'XL3-P32L340', 2008, 49);
@@ -344,19 +344,19 @@ INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLi
  VALUES(7, to_date('20000726','YYYYMMDD'), to_date('20100713','YYYYMMDD'), 1, 12345678, 4, 5);
 
 INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
- VALUES(7, to_date('20030726','YYYYMMDD'), to_date('201007214','YYYYMMDD'), 2, 22345678, 2, 5);
+ VALUES(8, to_date('20030726','YYYYMMDD'), to_date('20150714','YYYYMMDD'), 2, 22345678, 2, 5);
 -- The rest have booked 1
 
 INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
- VALUES(7, to_date('20150726','YYYYMMDD'), to_date('20150715','YYYYMMDD'), 4, 12345678, 3, 6);
+ VALUES(9, to_date('20150726','YYYYMMDD'), to_date('20150715','YYYYMMDD'), 4, 12345678, 3, 6);
 
 INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
- VALUES(7, to_date('20030726','YYYYMMDD'), to_date('20100716','YYYYMMDD'), 3, 1, 123, 7);
+ VALUES(10, to_date('20030726','YYYYMMDD'), to_date('20100716','YYYYMMDD'), 3, 1, 123, 7);
 
 INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
- VALUES(7, to_date('20150726','YYYYMMDD'), to_date('20160717','YYYYMMDD'), 3, 1, 6, 8);
+ VALUES(11, to_date('20150726','YYYYMMDD'), to_date('20160717','YYYYMMDD'), 3, 1, 6, 8);
 
 INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
- VALUES(7, to_date('20030726','YYYYMMDD'), to_date('20100718','YYYYMMDD'), 3, 1, 1235, 9);
+ VALUES(12, to_date('20030726','YYYYMMDD'), to_date('20100718','YYYYMMDD'), 3, 1, 1235, 9);
 
 -- END Booked Tours
