@@ -40,4 +40,4 @@ INSERT INTO TravelingWith(travelingWithId, customerId, firstName, lastName, age)
 
 
 INSERT INTO BookedTour (bookedTourId, purchaseDate, travelDate, tourId, driverLicense, licensePlate, customerId)
- VALUES(13, to_date('20000726','YYYYMMDD'), to_date('20160305','YYYYMMDD'), 1, 12345678, 1, 1);
+ VALUES(13, to_date('20000726','YYYYMMDD'), to_date('20160305','YYYYMMDD'), 1, 12345678, 1, 13);
