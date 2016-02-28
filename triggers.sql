@@ -35,7 +35,7 @@ CREATE OR REPLACE TRIGGER autoSetBookedTourDate
 BEFORE INSERT ON BookedTour
 FOR EACH ROW
 BEGIN
-	:NEW.purchaseDate := DATEADD(month, 3, GETDATE()
+	:NEW.purchaseDate := ADD_MONTHS(SYSDATE(), 3);
 END;
 /
 
